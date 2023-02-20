@@ -1,11 +1,15 @@
-
+from django.shortcuts import render #Renderiza la plantilla html
 from django.http import HttpResponse, JsonResponse 
 from .models import Project, Tasks
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404 
+import datetime
+
+
+
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Index page")
+    return render(request, 'home.html')
 
 def hello(request, username):
     return HttpResponse("<h1>Hello %s<h1>" % username)
@@ -23,3 +27,7 @@ def tasks(request, title):
     task = Tasks.objects.get(title = title)
     return HttpResponse("task: %s" % task.title)
 
+def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s.</body></html>"
+    return HttpResponse(html)
