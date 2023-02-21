@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doguitar_home</title>
-</head>
-<body>
-    <div> <!-- Nav bar -->
-        <img src="" alt="Doguitar logo">
-        <h1>Doguitar</h1>
-        <div>
-            <a href="../login/">Username</a>
-            <img src="" alt="user image">
-        </div>
-    </div>
+{% extends 'nav.html' %}
 
+{% block content %}
+ 
     <div> 
         <h4>Bark like a hero!</h4>
         <div> <!-- Lecciones -->
             <h3>Wenas, quiere continuar con su leccion?</h3>
             <h4>Progreso:  3/10</h4>
-            <a href="../lessons/">Continuar</a>
+            <a href="{% url 'lessons' %}">Continuar</a>
         </div>
 
         <div> <!-- Libreria de acordes -->
@@ -38,6 +24,4 @@
         </div>
     </div>
 
-
-</body>
-</html>
+{% endblock %}

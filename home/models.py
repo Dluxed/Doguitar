@@ -6,4 +6,16 @@ class Users(models.Model):
     user_email = models.EmailField(null=True)
     #user_image = models.FilePathField()
     level = models.IntegerField()
+
+    def __str__(self):
+        return str(self.id) + ' - ' +self.username
+    
+class Lessons(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    finished = models.BooleanField(null=False, default=False)
+
+
+    def __str__(self):
+        return str(self.id) + ' - ' + self.title
     

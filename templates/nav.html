@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Doguitar</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+        
+    <div class="navbar"> <!-- Nav bar -->
+            
+        <img src="{% static 'Doguitar Cover.png' %}" alt="Doguitar logo" width="500">
+        <h1>Doguitar</h1>
+        
+        <div>
+            <a href="{% url 'login' %}">{{ user }}</a>
+            <img src="#" alt="user image" >
+        </div>
+        
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'lessons' %}">Lessons</a>
+            </li>
+            <li>
+                <a href="#">Chords</a>
+            </li>            
+            <li>
+                <a href="#">Tuner</a>
+            </li>         
+            <li>
+                <a href="{% url 'login' %}">Login</a>
+            </li>       
+        </ul>
+        
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

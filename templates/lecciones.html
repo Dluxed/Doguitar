@@ -1,34 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lections</title>
-</head>
-<body>
-    <div> <!-- Nav bar -->
-        <img src="" alt="Doguitar logo">
-        <h1>Doguitar</h1>
-        <div>
-            <a href="profile.html">Username</a>
-            <img src="" alt="user image">
-        </div>
-    </div>
-    
-    <div> <!-- Side bar -->
-        <H3>Introduccion</H3>
-        <h5>Notas musicales</h5>
-        <h5>trastes</h5>
-        <h5>tablatura</h5>
+{% extends 'nav.html' %}
 
-        <h3>Escalas!</H3>
-        <h5>Escalas mayores!</h5>
-        <h5>Escalas menores!</h5>
+{% load static %}
+
+{% block content %}
+
+    <div> <!-- Side bar -->
+        {% for x in lessons %}
+
+            <h3>{{ x.title }}</h3>
+
+        {% endfor %}
         
-        <h3>Acordes</h3>
-        <h5>Acordes basicos</h5>
     </div>
     
-</body>
-</html>
+
+{% endblock %}

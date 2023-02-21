@@ -9,7 +9,7 @@
 <body>
     <div>
         <div>
-            <a href=""><img src="" alt="Doguitar logo">
+            <a href="{% url 'home' %}"><img src="" alt="Doguitar logo">
                 <h1>Doguitar</h1></a>
         </div>
         <form action="">
@@ -20,7 +20,7 @@
             <input type="password" name="" id="">
             <button type="submit"> Iniciar sesion</button>
             <p>No tienes cuenta?</p>
-            <a href="../register/">Registrate :D</a>
+            <a href="{% url 'register' %}">Registrate :D</a>
         </form>
         
 
