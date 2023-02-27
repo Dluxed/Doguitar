@@ -16,6 +16,14 @@ def register(request):
 
 def lessons(request):
     lessons = Lessons.objects.all()
+    print(lessons),
     return render(request, '../templates/lecciones.html', {
         'lessons': lessons
+    })
+
+def lesson_detail(request, id):
+    lesson = Lessons.objects.get(id = id),
+    print(lesson),
+    return render(request, '../templates/lesson_detail.html', {
+        'lesson': lesson 
     })
