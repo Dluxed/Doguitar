@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <div>
-        <div>
-            <a href="{% url 'home' %}"><img src="" alt="Doguitar logo">
-                <h1>Doguitar</h1></a>
-        </div>
-        <form action="">
+{% extends 'nav.html' %}
+
+{% block content %}
+
+
+
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+
+    <button>Sign up</button>
+</form>
+<p>{{error}}</p>
+<!--<form action="">
             <p>Correo electronico</p>
             <input type="email">
             <p>Usuario</p>
@@ -24,9 +23,6 @@
             <button type="submit">Registrarse</button>
             <p>Ya tienes cuenta?</p>
             <a href="{% url 'login' %}">Iniciar sesion</a>
-        </form>
+        </form>-->
         
-
-    </div>
-</body>
-</html>
+{% endblock %}

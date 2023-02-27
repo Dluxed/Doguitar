@@ -11,7 +11,7 @@
 </head>
 <body>
         
-    <div class="navbar"> <!-- Nav bar -->
+    <header class="navbar"> <!-- Nav bar -->
             
         <img src="{% static 'Doguitar Cover.png' %}" alt="Doguitar logo" width="500">
         <h1>Doguitar</h1>
@@ -29,17 +29,26 @@
                 <a href="{% url 'lessons' %}">Lessons</a>
             </li>
             <li>
-                <a href="#">Chords</a>
+                <a href="{% url 'chords' %}">Chords</a>
             </li>            
             <li>
                 <a href="#">Tuner</a>
             </li>         
+            {% if user.is_authenticated %}
+            <li>
+                <a href="#">Profile</a>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">Logout</a>
+            </li>
+            {% else %}
             <li>
                 <a href="{% url 'login' %}">Login</a>
-            </li>       
+            </li>     
+            {% endif %}
         </ul>
         
-    </div>
+    </header>
 
     {% block content %}
     {% endblock %}

@@ -16,11 +16,11 @@ Including another URLconf
 from django import urls
 from django.contrib import admin
 from django.urls import path, include
-
+from home import views
 
 urlpatterns = [    
     #urls(r'^login/', include('login.urls')),
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('prueba/', include('myapp.urls'))
+    path('chords/', views.chords, name='chords')
 ]
