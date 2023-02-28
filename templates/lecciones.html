@@ -5,7 +5,7 @@
 {% block content %}
 
     <div> <!-- Side bar -->
-        {% for x in lessons %}
+        {% for x in lecciones %}
            <a href="{{ x.get_absolute_url }}/lessons/{{ x.id }}">
                 <h3>{{ x.title }}</h3>
             </a>
