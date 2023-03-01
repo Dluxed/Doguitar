@@ -2,8 +2,6 @@
 
 {% block content %}
 
-
-
 <form method="post">
     {% csrf_token %}
     {{form}}
@@ -11,6 +9,11 @@
     <button>Sign up</button>
 </form>
 <p>{{error}}</p>
+
+<div>
+    <p>Ya tienes una cuenta?</p>
+    <a href="{% url 'login' %}"><button>Iniciar sesion</button></a>
+</div>
 <!--<form action="">
             <p>Correo electronico</p>
             <input type="email">

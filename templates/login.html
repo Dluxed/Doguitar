@@ -11,7 +11,12 @@
     </form>
 
     {{error}}
-        <!--
+    
+    <div>
+        <p>No tienes una cuenta?</p>
+        <a href="{% url 'register' %}"><button>Crear una cuenta</button></a>
+    </div>
+    <!--
             <form action="">
             <p>Ya tienes una cuenta?</p>
             <p>Usuario</p>
