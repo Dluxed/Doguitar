@@ -13,3 +13,12 @@ class Chords(models.Model):
     name = models.CharField(max_length=20)
     image = models.FilePathField()
     sound = models.FilePathField()
+
+class Lessons(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    finished = models.BooleanField(null=False, default=False)
+
+    def __str__(self):
+      return self.title
+    

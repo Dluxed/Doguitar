@@ -1,11 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Lessons
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
-from django.http import HttpResponse
+from django.contrib.auth.models import User
 from django.db import IntegrityError
-# Create your views here.
+
 def home(request):
     return render(request, '../templates/home.html')
 
@@ -58,32 +56,6 @@ def register(request):
                 'form': UserCreationForm,
                 'error': "passwords do not match"
             })
-
-
-    
-
-def lessons(request):
-    lessons = Lessons.objects.all()
-    print(lessons)
-    return render(request, '../templates/lecciones.html', {
-        'lessons': lessons
-    })
-
-#Nota: 
-    #El ciclo de python luce asi pero exporta con simbolos adicionales en los valores
-    #El ciclo de jinja ya ignora los valores adicionales.... so its better
-        #lesson = [x.title for x in p], 
-    
-def lesson_detail(request, id):
-    #CUIDADO CON LAS COMAS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    p = get_object_or_404(Lessons, id=id)
-    
-    #print([x.title for x in p]),
-    
-    return render(request, '../templates/lesson_detail.html', {
-        'p': p 
-        #'lesson': lesson
-    })
 
 def chords(request):    
     return render(request, 'chords.html')
