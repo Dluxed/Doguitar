@@ -1,14 +1,18 @@
-{% extends 'nav.html' %}
+{% extends 'sidebar.html' %}
 
 {% load static %}
 
 {% block content %}
 
-    <div> <!-- Side bar -->
+    <div class="sm:ml-64"> 
+        <h1 class="">Introduccion a ala guitarra</h1>
         {% for x in lecciones %}
-           <a href="{{ x.get_absolute_url }}/lessons/{{ x.id }}">
-                <h3>{{ x.title }}</h3>
+        <div class="dark:bg-gray-800 m-2 p-2  hover:bg-gray-700 hover:m-1  border-b-8 border-r-4 rounded-lg border-gray-900">
+           <a class="" href="{{ x.get_absolute_url }}/lessons/{{ x.id }}">
+                <h3 class="pl-4">{{ x.title }}</h3>
+                
             </a>
+        </div>
         {% endfor %} 
         
     </div>

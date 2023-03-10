@@ -1,5 +1,16 @@
-{% extends 'nav.html' %}
+{% extends 'sidebar.html' %}
+{% load static %}
 
 {% block content %}
-<h1>Wenas {{user}} este es tu perfil!</h1>
+    <div class="sm:ml-64">        
+        <h1>Wenas {{user}} este es tu perfil!</h1>
+        <a href=""></a>
+        <img src="{% static 'SockImage2.jpg' %}" alt="" style="width: 300px;">
+        <h3>HuskyPresident64@hornymail.com</h3>
+        <p>Nivel 5</p>
+        <p>Lecciones completadas: 5</p>
+        <p>Fecha de inicio: 21/01/23</p>
+        <button>Editar perfil</button>
+    </div>
+
 {% endblock %}

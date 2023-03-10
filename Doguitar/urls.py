@@ -26,5 +26,7 @@ urlpatterns = [
     path('login/', views.signin, name="login"),
     path('register/', views.register, name="register"),
     path('lessons/', include('lessons.urls')),
-    path('logout', views.signout, name='logout')
+    path('logout/', views.signout, name='logout'),
+    path('tuner/', views.tuner, name='tuner'),
+    path('profile/', views.profile, name='profile')
 ]

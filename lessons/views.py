@@ -6,11 +6,13 @@ def chord_library(request):
 
 def lesson_detail(request, id):
     #CUIDADO CON LAS COMAS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    p = get_object_or_404(Lessons, id=id)
+    obj = get_object_or_404(Lessons, id=id)
     #print([x.title for x in p]),
-    return render(request, '../templates/lesson_detail.html', {
-        'p': p,
-        'image': p.image 
+    print(obj.description) 
+    return render(request, 'lesson_detail.html', {
+        'lesson': obj,
+        'description': obj.description,
+        'image': obj.image 
         #'lesson': lesson
     })
 

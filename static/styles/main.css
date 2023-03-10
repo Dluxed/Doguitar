@@ -30,3 +30,7 @@ body {
 .navbar ul li a:hover {
     color: #F6D93E;
 }
+
+.chords {
+    width: 250px;
+}

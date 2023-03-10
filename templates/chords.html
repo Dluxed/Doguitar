@@ -1,6 +1,22 @@
-{% extends 'nav.html' %}
+{% extends "sidebar.html" %}
+{% load static %}
 
 {% block content %}
-<h1>Chords library</h1>
-<p>Commung soon! :D</p>
+    <div class="sm:ml-64">
+        <h1>Chords library</h1>
+        <h1>Primary Chords</h1>
+        <h2>Do</h2>
+        <img src="{% static 'chords_images/C_chord.jpg' %}" alt="" class="chords">
+        <h2>La</h2>
+        <img src="{% static 'chords_images/A_chord.jpg' %}" alt="" class="chords">
+        <h2>Sol</h2>
+        <img src="{% static 'chords_images/G_chord.jpg' %}" alt="" class="chords">
+        <h2>Mi</h2>
+        <img src="{% static 'chords_images/E_chord.jpg' %}" alt="" class="chords">
+        <h2>Re</h2>
+        <img src="{% static 'chords_images/D_chord.jpg' %}" alt="" class="chords">
+
+        <H2>Variations</H2>
+        <p>Commung soon! :D</p>
+    </div>
 {% endblock %}

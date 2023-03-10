@@ -1,9 +1,14 @@
-{% extends 'nav.html' %}
+{% extends 'sidebar.html' %}
 
 {% block content %}
 
 <h1>This is the detailed lesson: </h1>
-    <h2>{{p}}</h2>
-    <p>{{p.description}}</p>
-    <img src="{% url 'get_image' id=p.id %}" alt="{{p.title}}_image1">
+    <h2>{{lesson.title}}</h2>
+    <div>
+        {{ description }}
+    </div>
+    <img src="{% url 'get_image' id=lesson.id %}" alt="{{lesson.title}}_image1">
+
+    <a href="#"><button>Anterior Leccion</button></a>
+    <a href="#"><button>Siguiente Leccion</button></a>
 {% endblock %}
