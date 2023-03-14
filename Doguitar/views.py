@@ -17,7 +17,7 @@ def signin(request):
                 'error': "Usuer or password is incorrect"
             })
         else:
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('home')
 
 def signout(request):
@@ -38,7 +38,7 @@ def register(request):
             try:
                 user = User.objects.create_user(username=request.POST['username'], password=request.POST['password1'])
                 user.save()
-                login(request, user)
+                login(request, user, backend='django.contrib.auth.backends.ModelBackend')
                 #return HttpResponse("User created successfully")
                 return redirect('home')
             except IntegrityError:

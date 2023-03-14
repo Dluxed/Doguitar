@@ -28,5 +28,6 @@ urlpatterns = [
     path('lessons/', include('lessons.urls')),
     path('logout/', views.signout, name='logout'),
     path('tuner/', views.tuner, name='tuner'),
-    path('profile/', views.profile, name='profile')
+    path('profile/', views.profile, name='profile'),
+    path('accounts/', include('allauth.urls'))
 ]

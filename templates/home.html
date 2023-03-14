@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <div class="sm:ml-64"> 
+    <div class="sm:ml-64 text-center flex flex-col min-w-sm"> 
         <h4>Bark like a hero!</h4>
-        <div> <!-- Lecciones -->
+        <div class="m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
             <h3>Wenas, quiere continuar con su leccion?</h3>
             <h4>Progreso:  3/10</h4>
-            <a href="{% url 'lessons' %}"><button class="rounded dark:bg-blue-500">Continuar</button></a>
+            <a href="{% url 'lessons' %}"><button class="rounded dark:bg-blue-500 p-1 mt-2">Continuar</button></a>
         </div>
 
         <div> <!-- Libreria de acordes -->
