@@ -29,5 +29,6 @@ urlpatterns = [
     path('logout/', views.signout, name='logout'),
     path('tuner/', views.tuner, name='tuner'),
     path('profile/', views.profile, name='profile'),
-    path('accounts/', include('allauth.urls'))
+    path('accounts/', include('allauth.urls')),
+    #path('testRegister/', views.testRegister, name='testRegister')
 ]
