@@ -22,7 +22,7 @@ urlpatterns = [
     #urls(r'^login/', include('login.urls')),
     path('', views.home, name="home"),
     path('admin/', admin.site.urls),
-    path('chords/', views.chords, name='chords'),
+    path('chords/', include('chords.urls'), name='chords'),
     path('login/', views.signin, name="login"),
     path('register/', views.register, name="register"),
     path('lessons/', include('lessons.urls')),
