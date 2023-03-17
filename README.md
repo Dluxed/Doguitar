@@ -7,4 +7,4 @@ Have fun! and bark like a hero!
 
 -Doguitar Team
 
-![[Doguitar.jpg]]
+![[static/Doguitar.jpg]]
