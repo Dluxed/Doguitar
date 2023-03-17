@@ -54,8 +54,6 @@ def register(request):
                 'error': "passwords do not match"
             })
 
-def chords(request):    
-    return render(request, 'chords.html')
 
 def tuner(request):    
     return render(request, 'tuner.html')

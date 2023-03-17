@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="sm:ml-64 text-center flex flex-col min-w-sm"> 
+    <div class="sm:ml-64 text-center flex flex-col min-w-sm h-screen"> 
         <h4>Bark like a hero!</h4>
         <div class="m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
             <h3>Wenas, quiere continuar con su leccion?</h3>
@@ -10,17 +10,17 @@
             <a href="{% url 'lessons' %}"><button class="rounded dark:bg-blue-500 p-1 mt-2">Continuar</button></a>
         </div>
 
-        <div> <!-- Libreria de acordes -->
+        <div class="m-4 bg-gray-800 p-2 rounded-lg"> <!-- Libreria de acordes -->
             <h3>Libreria de acordes</h3>
             <img src="#" alt="chord_library">
-            <a href="chord_library.html">Llevame alla</a>
+            <a href="chord_library.html"><button class="rounded dark:bg-blue-500 p-1 mt-2">Llevame alla</button></a>
         </div>
 
-        <div> <!-- Afinador -->
+        <div class="m-4 bg-gray-800 p-2 rounded-lg"> <!-- Afinador -->
             <h3>Afinador</h3>
             <h4>En construccion!</h4>
             <img src="" alt="afinador">
-            <a href="afinador.html">Ir</a>
+            <a href="afinador.html"><button class="rounded dark:bg-blue-500 p-1 mt-2">Ir</button></a>
         </div>
     </div>
 
