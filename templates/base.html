@@ -9,19 +9,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Doguitar</title>
     
+    <!-- stylesheets que seran comprimidas -->
     {% compress css %}    
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
     {% endcompress %}
 </head>
 <body class="dark:bg-gradient-to-tr from-fuchsia-900 to-blue-800 h-fit text-white ">
         
-    <header class="sm:ml-64"> <!-- Nav bar -->
+    <!-- Nav bar -->
+    <header class="sm:ml-64"> 
         {% block navbar %}
         {% endblock %}
     </header>
 
          {% block sidebar %}
-         {% endblock %}    
+         {% endblock %} 
+         
+       <!-- Contenido -->  
        <div class="h-full ">
         {% block content %}
         {% endblock %}    

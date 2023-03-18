@@ -4,18 +4,26 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 
+# HOME render
 def home(request):
     return render(request, '../templates/home.html')
 
+# SIGNIN render
 def signin(request):
+    # Si es una solicitud renderiza
     if request.method == 'GET':
         return render(request, '../templates/login.html')
-    else: 
+    
+    #Si es un formulario envia
+    else:   
+        #Autentica el usuario
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
-        if user is None:
+        #Si no esta autenticado imprime 
+        if user is None: 
             return render(request, '../templates/login.html', {
                 'error': "Usuer or password is incorrect"
             })
+        #Si ya esta autenticado redirije
         else:
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('home')
@@ -25,14 +33,18 @@ def signout(request):
     return redirect('home')
 
 def register(request):
+    # Si es solicitud renderiza
     if request.method == 'GET':
         #print("enviando formulario")
         return render(request, '../templates/register.html', {
             'form': UserCreationForm
         })
+    # Envia el formulario
     else:
         #print(request.POST)
         #print("obteniendo datos")
+
+        #Verifica contraseñas
         if request.POST['password1'] == request.POST['password2']:
             # register user
             try:
@@ -60,4 +72,5 @@ def tuner(request):
 
 def profile(request):    
     return render(request, 'profile.html')
+
 

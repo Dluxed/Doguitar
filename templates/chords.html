@@ -3,13 +3,24 @@
 
 {% block content %}
     <div class="sm:ml-64 h-screen">
-        <h1>Chords library</h1>
+        
+        <h1 class="text-center m-4">Chords library</h1>
+        
+        <!-- MUESTRA EL ACORDE EN UNA CUADRICULA -->
+        <div id="diapason" class="grid gap-4 grid-rows-7 ">
+            <div id="rowIndex" class="grid-cols-13 flex space-x-8 justify-center"></div>   
+        </div>
+
+        <!-- SELECCION DE ACORDES -->
+        <h1 class="mt-4 text-center">Primary Chords</h1>
+        <div id="chordButtons" class="flex space-x-4 justify-center">
+        
+        </div>
+        
+        <!-- Acorde en JSON -->
         <div class="bg-gray-700">
             {{ chord }}
         </div>
-        
-        <h1>Primary Chords</h1>
-       
         
     </div>
 

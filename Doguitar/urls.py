@@ -22,13 +22,19 @@ urlpatterns = [
     #urls(r'^login/', include('login.urls')),
     path('', views.home, name="home"),
     path('admin/', admin.site.urls),
+
+    # urls
     path('chords/', include('chords.urls'), name='chords'),
-    path('login/', views.signin, name="login"),
-    path('register/', views.register, name="register"),
     path('lessons/', include('lessons.urls')),
-    path('logout/', views.signout, name='logout'),
     path('tuner/', views.tuner, name='tuner'),
     path('profile/', views.profile, name='profile'),
+
+    # Authenitication urls
+    path('login/', views.signin, name="login"),
+    path('register/', views.register, name="register"),
+    path('logout/', views.signout, name='logout'),
+    
+    #All auth authentication urls
     path('accounts/', include('allauth.urls')),
     #path('testRegister/', views.testRegister, name='testRegister')
 ]
