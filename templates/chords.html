@@ -6,15 +6,23 @@
         
         <h1 class="text-center m-4">Chords library</h1>
         
-        <!-- MUESTRA EL ACORDE EN UNA CUADRICULA -->
-        <div id="diapason" class="grid gap-4 grid-rows-7 ">
-            <div id="rowIndex" class="grid-cols-13 flex space-x-8 justify-center"></div>   
+        <!-- DIAPASON -->
+        <div id="chordModel" class="box-content m-8 max-w-xl mx-auto">
+            <div id="colIndex" class="ml-14 mb-4 mr-7 flex justify-between"></div>
+            <div class="flex">
+                <div id="rowIndex"></div>
+                <div id="diapason" class="bg-gray-700 border-sky-400 border-2 ml-4 grid grid-rows-6 grid-cols-12 w-full">
+                    
+                </div>
+            </div>
         </div>
 
         <!-- SELECCION DE ACORDES -->
         <h1 class="mt-4 text-center">Primary Chords</h1>
-        <div id="chordButtons" class="flex space-x-4 justify-center">
-        
+        <div id="chordButtons" class="flex space-x-4 justify-center m-4">
+
+            
+            
         </div>
         
         <!-- Acorde en JSON -->
@@ -24,5 +32,7 @@
         
     </div>
 
+    
     <script src="{% static 'scripts/chords.js' %}"></script>
+ 
 {% endblock %}
