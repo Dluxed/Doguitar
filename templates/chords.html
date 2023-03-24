@@ -10,9 +10,14 @@
         <div id="chordModel" class="box-content m-8 max-w-xl mx-auto">
             <div id="colIndex" class="ml-14 mb-4 mr-7 flex justify-between"></div>
             <div class="flex">
-                <div id="rowIndex"></div>
-                <div id="diapason" class="bg-gray-700 border-sky-400 border-2 ml-4 grid grid-rows-6 grid-cols-12 w-full">
+                <div id="rowIndex" class="grid grid-rows-6 grid-flow-col border-r-4 border-white p-1">
+                    <div class='row-start-3 p-1 pr-2 '><div class='w-4 h-4 rounded-full border-2 border-white '></div></div>
+                </div>
+                <div id="diapason" class="bg-gray-700 border-sky-400 border-2 ml-4 grid grid-rows-6 grid-cols-12 p-1 w-full">
                     <div class='col-span-12 border-r-4 border-b-2 border-white text-center'>Wenaaas</div>
+                    <div class='text-center border-r-2 border-b-1 border-white'>
+                        <div class='row-start-4 rounded-full bg-sky-500 w-6 h-6 mx-auto'>X</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,10 +30,7 @@
             
         </div>
         
-        <!-- Acorde en JSON -->
-        <div class="bg-gray-700">
-            {{ chord }}
-        </div>
+        
         
     </div>
 

@@ -5,16 +5,16 @@
 {% block content %}
     <div class="bg-gray-900 rounded-xl shadow-lg max-w-md flex flex-col  m-auto my-8 p-8">
         
-        <a class="flex justify-center" href="{% url 'home' %}"><h1 class="" >Doguitar</h1></a>
+        <a class="flex justify-center text-4xl" href="{% url 'home' %}"><h1 class="" >Doguitar</h1></a>
         <img class="h-60 w-60 mt-2 self-center rounded-full " src="{% static 'lessons_images/Doguitar.jpg' %}" alt="">
             
         <form class="space-y-8" action="/login/" method="POST">
             {% csrf_token %}
-            <div class="flex justify-center">
+            <div class="flex justify-center text-xl">
                 <label for="id_username">Username:</label><br>
                 <input id="id_username" type="text" name="username" autocomplete="username" maxlength="150" required="" class="text-black rounded-sm ml-4 hover:border-3 border-sky-600">
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center text-xl">
                 <label class="" for="id_password">Password: </label><br>
                 <input id="id_password" type="password" name="password" autocomplete="current-password" required="" class="text-black ml-4 ">
             </div>
