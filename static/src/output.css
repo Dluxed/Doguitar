@@ -1397,6 +1397,14 @@ input[type="range"]::-ms-fill-lower {
   padding-right: 1rem;
 }
 
+.pl-11 {
+  padding-left: 2.75rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }

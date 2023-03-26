@@ -45,11 +45,6 @@ for(let i=1; i < 13; i++){
     colIndex.innerHTML += "<span class='w-4'>" + i + "</span>";
 }
 
-//STRING INDEX
-/*for(let i=6; i>=1; i--){
-    rowIndex.innerHTML += "<h1>"+ i +"</h1>";
-}*/
-
 //DIAPASON
 function showChord(){
     //Limpia el diapason
@@ -81,11 +76,6 @@ function printRow(value){
     }
 }
 
-/*//DIAPASON
-for(let i=1; i<=72; i++){
-    diapason.innerHTML += "<h1 class='text-center border-r-4 border-b-2 border-white'>"+ "-X-" +"</h1>";
-}
-*/
 
 //Initial request
 //document.addEventListener("DOMContentLoaded", getChord('C'));
