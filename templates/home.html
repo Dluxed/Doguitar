@@ -2,10 +2,26 @@
 {% load static %}
 
 {% block content %}
-    <div class="sm:ml-64 text-center flex flex-col min-w-sm h-screen" style="background-image: url(static/Wallpaper.jpg); background-size: cover;"> 
-        <div class="text-4xl ">
-            <h4>Bark like a hero!</h4>
-        </div>
+<!-- style="background-image: url(static/Wallpaper.jpg); background-size: cover;" -->
+    <div class="sm:ml-64 text-center flex flex-col min-w-sm h-screen" > 
+        <!--//Image-->
+        
+            <div class="h-full flex" style="background-image: url(static/Wallpaper.jpg); background-size: cover;">
+                <div class="flex flex-col my-auto ml-32">
+                    <img src="{% static 'Cover.jpeg'%}" alt="Doguitar Cover" style="height:300px; width: 400px;" >
+                <h4 class="text-4xl mt-5">Bark like a hero!</h4>
+             
+                </div>
+                
+            </div>
+            
+            
+        
+
+            
+        
+
+
         <div class="m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
             <h3>Wenas, quiere continuar con su leccion?</h3>
             <h4>Progreso:  3/10</h4>
