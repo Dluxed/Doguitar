@@ -28,6 +28,7 @@ urlpatterns = [
     path('lessons/', include('lessons.urls')),
     path('tuner/', views.tuner, name='tuner'),
     path('profile/', views.profile, name='profile'),
+   
 
     # Authenitication urls
     path('login/', views.signin, name="login"),

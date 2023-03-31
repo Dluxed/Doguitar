@@ -1,16 +1,15 @@
 {% extends "footer.html" %}
 
 {% block content %}
-    <div class="sm:ml-64">
-        <h1>This is the detailed lesson: </h1>
-        <h2>{{lesson.title}}</h2>
-        <div>
-            {{ description }}
-        </div>
-        <img src="{% url 'get_image' id=lesson.id %}" alt="{{lesson.title}}_image1">
+    <div class=" sm:ml-64 container border border-sky-400 h-3/4">
+    
+    <h2 class="text-6xl">{{lesson.title}}</h2>
+    <div class="bg-gray-800 ">
+        {{ description }}
+    </div>
+    <img src="{% url 'get_image' id=lesson.id %}" alt="{{lesson.title}}_image1" class="border border-spacing-2 border-red-500 w-48 p-4 hover:p-0">
 
-       <a href="#"><button>Anterior Leccion</button></a>
-        <a href="#"><button>Siguiente Leccion</button></a>
-
+    <a href="#"><button>Anterior Leccion</button></a>
+    <a href="#"><button>Siguiente Leccion</button></a>
     </div>
 {% endblock %}
