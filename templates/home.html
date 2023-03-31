@@ -13,41 +13,45 @@
             
   
 
-        <div class="grid grid-cols-3 pt-2">
-            <div class="m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
-                <div class="flex p-2">
+        <div class="grid grid-cols-3 pt-2 text-lg">
+            <div class="flex flex-col m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
+                <div class="flex p-2 bg-slate-700">
                     <img src="{% static 'Support.jpg' %}" alt="Dogue Lessons" class="rounded-full w-1/3 "> 
                     <div class="flex flex-col ml-2">
-                        <h3 class="h-fit my-auto mx-auto text-xl">Lessons</h3>
+                        <h3 class="h-fit my-auto mx-auto text-2xl">Lessons</h3>
 
                     </div>
                 </div>
-                <p>Ready to rock? Take a guitar lesson and unleash your musical potential!</p>
-                <a href="{% url 'lessons' %}"><button class="mt-6 w-full rounded bg-amber-400 p-2 bottom-2">Take ne there!</button></a>
+                <p class="font-mono text-lg my-auto">Ready to rock? Take a guitar lesson and unleash your musical potential!</p>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'lessons' %}" class="mt-auto"><button class="w-full rounded bg-amber-500 p-2 bottom-2 font-bold">Take ne there!</button></a>   
+                {% else %}
+                    <a href="{% url 'login' %}" class="mt-auto"><button class="w-full rounded bg-amber-500 p-2 bottom-2 font-bold">Sing in!</button></a>
+                {% endif %}
             </div>
     
-            <div class="m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
-                <div class="flex p-2">
+            <div class="flex flex-col m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
+                <div class="flex p-2 bg-slate-700">
                     <img src="{% static 'Chords.jpg' %}" alt="Dogue Lessons" class="rounded-full w-1/3 "> 
                     <div class="flex flex-col ml-2">
-                        <h3 class="h-fit my-auto mx-auto text-xl">Chords library</h3>
+                        <h3 class="h-fit my-auto mx-auto text-2xl">Chords library</h3>
                     
                     </div>
                 </div>
-                <p>Want to learn how to play your favorite songs? Check out our extensive chords library!   </p>
-                <a href="{% url 'chords' %}"><button class="inline-block w-full rounded bg-sky-400 p-2 mt-6">Take ne there!</button></a>
+                <p class="font-mono my-auto p-2">Want to learn how to play your favorite songs? Check out our extensive chords library!   </p>
+                <a href="{% url 'chords' %}"><button class="inline-block w-full rounded bg-amber-500 p-2 mt-6 font-bold">Take ne there!</button></a>
             </div>
     
-            <div class="m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
-                <div class="flex p-2">
+            <div class="flex flex-col m-4 bg-gray-800 p-2 rounded-lg "> <!-- Lecciones -->
+                <div class="flex p-2 bg-slate-700">
                     <img src="{% static 'lessons_images/Doguitar.jpg' %}" alt="Dogue Lessons" class="rounded-full w-1/3 "> 
                     <div class="flex flex-col ml-2">
-                        <h3 class="h-fit my-auto mx-auto text-xl">Tuner</h3>
+                        <h3 class="h-fit my-auto mx-auto text-2xl">Tuner</h3>
                     
                     </div>
                 </div>
-                <p>"Don't let a poorly tuned guitar ruin your performance. Use our guitar</p>
-                <a href="#"><button class="mt-6 inline-block w-full rounded bg-red-500 p-2">Under construction!</button></a>
+                <p class="font-mono my-auto">"Don't let a poorly tuned guitar ruin your performance. Use our guitar</p>
+                <a href="#" class="mt-auto"><button class="mt-6 inline-block w-full rounded bg-red-500 p-2 font-bold">Under construction!</button></a>
             </div>
         </div>     
         

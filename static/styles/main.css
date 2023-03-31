@@ -3,3 +3,9 @@
 .home {
     background-image: url(static/Wallpaper.jpg);
 }
+
+h2 {
+    font-weight: bold !important;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}

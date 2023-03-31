@@ -3,10 +3,12 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+from lessons import models
 
 # HOME render
 def home(request):
-    return render(request, '../templates/home.html')
+    l = models.Lessons.objects.all()
+    return render(request, '../templates/home.html', { 'lecciones': l })
 
 # SIGNIN render
 def signin(request):

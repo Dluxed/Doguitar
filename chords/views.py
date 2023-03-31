@@ -1,12 +1,15 @@
 from django.shortcuts import render
 import requests, json
+from lessons import models
 # Create your views here.
 
 # render de chords
 def chords(request, chord):    
     response = get_chord(chordName = chord)
+    l = models.Lessons.objects.all()
     return render(request, 'chords.html', {
-        'chord': response
+        'chord': response,
+        'lecciones': l
     })
 
 # CHORDS API requests

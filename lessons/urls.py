@@ -10,4 +10,6 @@ urlpatterns = [
     # Solicita imagen del servidor
     path('image/<int:id>', views.get_image, name='get_image'),
 
+    path('setDone/<int:id>', views.setDone, name='setDone'),
+
 ]

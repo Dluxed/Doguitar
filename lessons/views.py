@@ -32,3 +32,19 @@ def get_image(request, id):
     response = HttpResponse(image_data, content_type='image/jpeg')
     return response
 
+def setDone(request, id):
+    less = Lessons.objects.get(id=id)
+    less.finished = True
+    less.save()
+
+    obj = get_object_or_404(Lessons, id=id)
+    allL = Lessons.objects.all()
+    
+    return render(request, 'lesson_detail.html', {
+        'lesson': obj,
+        'description': obj.description,
+        'image': obj.image,
+        'lecciones': allL
+        
+        #'lesson': lesson
+    })
