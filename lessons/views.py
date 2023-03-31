@@ -7,20 +7,23 @@ def chord_library(request):
 def lesson_detail(request, id):
     #CUIDADO CON LAS COMAS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     obj = get_object_or_404(Lessons, id=id)
+    allL = Lessons.objects.all()
     #print([x.title for x in p]),
     print(obj.description) 
     return render(request, 'lesson_detail.html', {
         'lesson': obj,
         'description': obj.description,
-        'image': obj.image 
+        'image': obj.image,
+        'lecciones': allL
+        
         #'lesson': lesson
     })
 
 def lessons(request):
-    lecciones = Lessons.objects.all()
+    l = Lessons.objects.all()
     #print(lessons)
     return render(request, '../templates/lecciones.html', {
-        'lecciones': lecciones
+        'lecciones': l
     })
 
 def get_image(request, id):
@@ -28,3 +31,4 @@ def get_image(request, id):
     image_data = obj.image.read()
     response = HttpResponse(image_data, content_type='image/jpeg')
     return response
+
